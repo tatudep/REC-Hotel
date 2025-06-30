@@ -1,0 +1,15 @@
+# Arquivos de build
+*.exe
+*.o
+*.obj
+*.out
+
+# Diretórios de build (opcional, caso use algum)
+build/
+bin/
+debug/
+release/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
