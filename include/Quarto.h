@@ -24,6 +24,7 @@ public:
     void set_tipo(const std::string& novo_tipo);
     void set_preco(double novo_preco);
     void set_ocupado(bool ocupado);
+    void set_numero(int numero);
 
 
 };

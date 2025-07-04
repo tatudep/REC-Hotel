@@ -1,0 +1,3 @@
+﻿Lavanderia;30;Lava Roupas
+Restaurante;50;Comes e bebes
+Academia;50;Esteira e Halteres

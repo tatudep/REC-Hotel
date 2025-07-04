@@ -1,0 +1,3 @@
+﻿Faturamento referente a 01/2025
+Ana;101;01/01/2025;10/01/2025;Sim;1000
+Total: R$ 1000

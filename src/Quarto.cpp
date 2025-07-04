@@ -39,3 +39,7 @@ void Quarto::set_preco(double novo_preco) {
 void Quarto::set_ocupado(bool novo_status) {
     ocupado = novo_status;
 }
+
+void Quarto::set_numero(int numero) {
+    this->numero = numero;
+}

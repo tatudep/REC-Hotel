@@ -1,0 +1,4 @@
+﻿Administrador;Paulo;admin;1234
+Recepcionista;Maria;recep;abcd
+Hospede;Carlos;hosp1;senha1
+Hospede;Ana;hosp2;senha2
