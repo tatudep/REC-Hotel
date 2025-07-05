@@ -72,6 +72,6 @@ Após o login, será exibido um menu com as funcionalidades do sistema. A navega
 
 ⸻
 
-🗂️ Base de dados
+## 🗂️ Base de dados
 
 Os dados são armazenados em arquivos .txt no diretório do projeto. Evite modificá-los manualmente para não corromper o sistema.
