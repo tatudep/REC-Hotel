@@ -14,6 +14,7 @@
 #include <fstream>
 #include <vector>
 
+// Exibe arte ASCII do sistema na tela inicial
 void exibir_ascii_art() {
     std::cout << "\n";
     std::cout << " ██╗  ██╗  ██████╗  ████████╗ ███████╗ ██╗         \n";
@@ -27,6 +28,7 @@ void exibir_ascii_art() {
     std::cout << "===================================================\n";
 }
 
+// Função de login: solicita credenciais e retorna o usuário autenticado
 Usuario* login() {
     SistemaHotel* sistema = SistemaHotel::getInstance();
     std::string login, senha;

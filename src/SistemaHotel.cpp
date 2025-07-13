@@ -2,16 +2,28 @@
 #include <iostream>
 #include <fstream>
 
+
+
+
+
+
+
+
+
+// Instância única do sistema (Singleton)
 SistemaHotel* SistemaHotel::instancia = nullptr;
 
+// Construtor: carrega dados do sistema
 SistemaHotel::SistemaHotel() {
     carregar_dados();
 }
 
+// Destrutor: salva dados do sistema
 SistemaHotel::~SistemaHotel() {
     salvar_dados();
 }
 
+// Retorna a instância única do sistema
 SistemaHotel* SistemaHotel::getInstance() {
     if (!instancia) {
         instancia = new SistemaHotel();
@@ -19,10 +31,12 @@ SistemaHotel* SistemaHotel::getInstance() {
     return instancia;
 }
 
+// Adiciona um usuário ao sistema
 void SistemaHotel::adicionar_usuario(Usuario* usuario) {
     usuarios.push_back(usuario);
 }
 
+// Lista todos os usuários cadastrados
 void SistemaHotel::listar_usuarios() const {
     std::cout << "--- Usuários ---\n";
     for (const auto& u : usuarios) {
@@ -30,10 +44,12 @@ void SistemaHotel::listar_usuarios() const {
     }
 }
 
+// Adiciona um quarto ao sistema
 void SistemaHotel::adicionar_quarto(const Quarto& quarto) {
     quartos.push_back(quarto);
 }
 
+// Lista todos os quartos cadastrados
 void SistemaHotel::listar_quartos() const {
     std::cout << "--- Quartos ---\n";
     for (const auto& q : quartos) {
@@ -297,4 +313,20 @@ void SistemaHotel::finalizar_estadia(size_t idx, bool usou_servicos, double valo
     }
     festadias << nome_hospede << ';' << numero_quarto << ';' << data_in << ';' << data_out << ';' << (usou_servicos ? "Sim" : "Não") << ';' << valor_final << '\n';
     festadias.close();
+}
+
+std::vector<Usuario*>& SistemaHotel::getUsuarios() {
+    return usuarios;
+}
+
+std::vector<Quarto>& SistemaHotel::getQuartos() {
+    return quartos;
+}
+
+std::vector<Reserva>& SistemaHotel::getReservas() {
+    return reservas;
+}
+
+std::vector<ServicoExtra>& SistemaHotel::getServicos() {
+    return servicos;
 }

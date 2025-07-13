@@ -2,24 +2,43 @@
 #include <ctime>
 #include <cmath>
 
+
+
+
+
+// Construtor da classe Reserva
 Reserva::Reserva(Hospede* hospede, Quarto* quarto, const std::string& data_checkin, const std::string& data_checkout)
     : hospede(hospede), quarto(quarto), data_checkin(data_checkin), data_checkout(data_checkout) {}
 
+// Retorna o hóspede associado à reserva
 Hospede* Reserva::get_hospede() const { return hospede; }
+
+// Retorna o quarto associado à reserva
 Quarto* Reserva::get_quarto() const { return quarto; }
+
+// Retorna a data de check-in
 std::string Reserva::get_data_checkin() const { return data_checkin; }
+
+// Retorna a data de check-out
 std::string Reserva::get_data_checkout() const { return data_checkout; }
+
+// Define a data de check-in
 void Reserva::set_data_checkin(const std::string& data) { data_checkin = data; }
+
+// Define a data de check-out
 void Reserva::set_data_checkout(const std::string& data) { data_checkout = data; }
 
+// Adiciona um serviço extra à reserva
 void Reserva::adicionar_servico(const ServicoExtra& servico) {
     servicos.push_back(servico);
 }
 
+// Retorna a lista de serviços extras da reserva
 const std::vector<ServicoExtra>& Reserva::get_servicos() const {
     return servicos;
 }
 
+// Calcula o valor total da reserva (diárias + serviços extras)
 double Reserva::calcular_valor_total() const {
     if (!quarto) return 0.0;
     // Calcular número de diárias
